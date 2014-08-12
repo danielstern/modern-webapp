@@ -45,6 +45,10 @@ module.exports = function(grunt) {
                 files: ['test/spec/{,*/}*.js'],
                 tasks: ['test:watch']
             },
+            less: {
+              files: ['<%= config.app %>/less/*.less'],
+              tasks: ['less']
+            },
             gruntfile: {
                 files: ['Gruntfile.js']
             },
