@@ -9,10 +9,15 @@ angular.module("DemoApp", ['ui.router']).directive("ngKitten", function () {
 }).config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
 
-    console.log("configuring");
-
     $stateProvider.state('home', {
-        url: '/home',
-        template: "hi"
+        url: '/',
+        views: {
+            "main": {
+                templateUrl: 'partials/main.html'
+            },
+            "image": {
+                template: '<ng-kitten></ng-kitten>'
+            }
+        }
     });
 });

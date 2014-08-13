@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Typescript Webapp</title>
+    <title>Modern Webapp</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -29,24 +29,24 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Typescript Webapp</a>
+      <a class="navbar-brand" ui-sref='home'>Modern Webapp</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
+        <li class="active"><a href="#">About</a></li>
+        <li><a href="#">Documentation</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-phone-alt"></span> Links<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
+            <li><a href="#">Github</a></li>
+            <li><a href="#">Typescript Docs</a></li>
+            <li><a href="#">Angular Docs</a></li>
             <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-headphones"></span> danielstern</a></li>
           </ul>
         </li>
       </ul>
@@ -55,7 +55,7 @@
 </nav>
 
       <div class="jumbotron">
-        <h1>Typescript Webapp</h1>
+        <h1>Modern Webapp <span class="glyphicon glyphicon-pushpin"></span> </h1>
         <p class="lead">With Angular, Typescript and Bootstrap 3</p>
         <p><a class="btn btn-primary btn-lg" href="#">Party on, App <span class="glyphicon glyphicon-ok"></span></a></p>
       </div>
@@ -63,28 +63,16 @@
       <div class="row">
         <div class="col-lg-6">
 
-          <div ui-view></div>
+          <div ui-view='main'></div>
 
-          <h4>Typescript</h4>
-          <p>Preprocesses your Javascript</p>
-
-          <h4>Less</h4>
-          <p>Wow!</p>
-
-          <h4>Bootstrap <em>3</em></h4>
-          <p>Because it's awesome.</p>
-
-          <h4>Angular + ui-router</h4>
-          <p>For writing directives.
-          </p>
-          <ng-kitten></ng-kitten>
-          <p><code>&lt;ng-kitten&gt;&lt;/ng-kitten&gt;</code></p>
+          <div ui-view='image'></div>
       </div>
 
     </div>
       <div class='footer'>
+        <hr>
       <div class="panel container text-muted">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team + danielstern</p>
+        <p><span class="glyphicon glyphicon-pencil"></span> danielstern</p>
       </div>
     </div>
 
