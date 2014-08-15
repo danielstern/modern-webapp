@@ -1,12 +1,7 @@
 var greeting = "Ice to meet you.";
 console.log(greeting);
 
-angular.module("DemoApp", ['ui.router']).directive("ngKitten", function () {
-    return {
-        template: '<img src="http://placekitten.com/300/200">',
-        restrict: 'AE'
-    };
-}).config(function ($stateProvider, $urlRouterProvider) {
+angular.module("DemoApp", ['ui.router']).config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
 
     $stateProvider.state('home', {
@@ -16,7 +11,17 @@ angular.module("DemoApp", ['ui.router']).directive("ngKitten", function () {
                 templateUrl: 'partials/main.html'
             },
             "image": {
-                template: '<ng-kitten></ng-kitten>'
+                template: '<img src=http://lorempixel.com/output/cats-q-c-300-200-5.jpg>'
+            }
+        }
+    }).state('docs', {
+        url: '/docs',
+        views: {
+            "main": {
+                templateUrl: 'partials/docs.html'
+            },
+            "image": {
+                template: '<img src=http://lorempixel.com/output/abstract-q-c-300-200-9.jpg>'
             }
         }
     });

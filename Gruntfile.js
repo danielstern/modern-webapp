@@ -411,7 +411,7 @@ module.exports = function(grunt) {
         'typescript',
         'less',
         'concat',
-        'cssmin',
+        // 'cssmin',
         'uglify',
         'copy:dist',
         'rev',
