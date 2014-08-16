@@ -1,4 +1,4 @@
-typescript-webapp
+Modern Webapp
 =================
 
 A new take on the webapp template with typescript and angular built in
@@ -15,4 +15,15 @@ Typescript provides desperately needed support for typing and classes in Javascr
 - don't have to use it - Javascript is valid Typescript
 
 ### LESS
-LESS is a powerful alternative to just writing normal CSS. 
+LESS is a powerful alternative to just writing normal CSS. It is backwards compatible with CSS but adds a useful precompiling step.
+
+- Use mixins and stuff
+- Nesting lets you isolate CSS and create a maintainable codebase
+- NOT SASS. NO RUBY! HALLELUJAH! :dancers:
+
+### Bootstrap 3
+Our next framework needs no introduction at all. Works right out of the box on everything, and looks great.
+
+- Responsive from the ground up
+- So awesome
+- Widely used and ideal for large and scalable projects
