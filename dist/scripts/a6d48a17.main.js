@@ -1,1 +1,0 @@
-var greeting="Ice to meet you.";console.log(greeting);
