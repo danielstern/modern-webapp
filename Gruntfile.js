@@ -255,6 +255,15 @@ module.exports = function(grunt) {
             }
         },
 
+        ngmin: {
+          directives: {
+            expand: true,
+            cwd: 'test/src',
+            src: ['directives/**/*.js'],
+            dest: 'test/generated'
+          }
+        },
+
         svgmin: {
             dist: {
                 files: [{
@@ -326,7 +335,7 @@ module.exports = function(grunt) {
                         '.htaccess',
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
-                        'styles/fonts/{,*/}*.*'
+                        // '.tmp/con/{,*/}*.*'
                     ]
                 }, {
                     expand: true,
@@ -376,7 +385,7 @@ module.exports = function(grunt) {
             'typescript',
             'less',
             'concurrent:server',
-            // 'autoprefixer',
+            'autoprefixer',
             'connect:livereload',
             'watch'
         ]);
@@ -411,7 +420,7 @@ module.exports = function(grunt) {
         'typescript',
         'less',
         'concat',
-        // 'cssmin',
+        'cssmin',
         'uglify',
         'copy:dist',
         'rev',

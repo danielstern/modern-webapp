@@ -1,5 +1,5 @@
 {
-  "name": "Modern Webapp",
+  "name": "modern-webapp",
   "version": "0.0.1",
   "description": "A fast, efficient and scalable webapp boilerplate featuring Typescript, Angular, Less and Bootstrap.",
   "main": "Gruntfile.js",
@@ -31,7 +31,8 @@
     "load-grunt-tasks": "~0.4.0",
     "typescript": "~1.0.1",
     "jshint-stylish": "~0.1.5",
-    "time-grunt": "~0.3.2"
+    "time-grunt": "~0.3.2",
+    "grunt-ngmin": "0.0.3"
   },
   "devDependencies": {},
   "scripts": {
