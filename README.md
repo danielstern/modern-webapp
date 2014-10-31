@@ -11,6 +11,25 @@ This is based on the popular HTML5 boilerplate but with several additions.
 - Less
 - TypeScript
 - Bower
+- 
+##Usage
+Clone the repository with Git Clone.
+Install all the dependencies:
+
+```
+npm install -g bower;
+npm install -g grunt; 
+npm install -g grunt-cli; 
+npm install -g less;
+npm install -g typescript;
+npm install;
+bower install;
+```
+
+Run grunt serve to serve the repository:
+```
+grunt serve;
+```
 
 ##Differences from the original webapp
 This app uses Typescript instead of Javascript. You can still use Javascript though, because Typescript is a superset of Javascript. However, a live-reload precompiler will warn you well in advance of any potential bugs. This app also opts for LESS instead of CSS. This app features a modern Bootstrap 3 implementation.
