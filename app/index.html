@@ -38,9 +38,8 @@
     <div class="container ">
         <nav class="navbar navbar-default" role="navigation">
             <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse-me">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -49,18 +48,21 @@
                     <a class="navbar-brand" ui-sref='home'>Modern Webapp</a>
                 </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="collapse navbar-collapse" id="collapse-me">
                     <ul class="nav navbar-nav">
-                        <li ui-sref='home' ui-sref-active="active"><a href=''>About</a>
+                        <li ui-sref='howto' ui-sref-active="active"><a href=''>How to Use</a>
                         </li>
-                        <li ui-sref='docs' ui-sref-active="active"><a href=''>Documentation</a>
+                        <li ui-sref='less' ui-sref-active="active"><a href=''>Less</a>
+                        </li>
+                        <li ui-sref='typescri[t' ui-sref-active="active"><a href=''>TypeScript</a>
+                        </li>
+                        <li ui-sref='router' ui-sref-active="active"><a href=''>ui-router</a>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <span class="glyphicon glyphicon-phone-alt"></span>Links
+                                <span class="glyphicon glyphicon-phone-alt"></span> Links
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
@@ -73,7 +75,7 @@
                                 <li class="divider"></li>
                                 <li>
                                     <a href="#">
-                                        <span class="glyphicon glyphicon-headphones"></span>danielstern</a>
+                                        <span class="glyphicon glyphicon-headphones"></span> danielstern</a>
                                 </li>
                             </ul>
                         </li>
@@ -84,18 +86,11 @@
             <!-- /.container-fluid -->
         </nav>
 
-        <div class="jumbotron">
-            <h1>Modern Webapp
-                <span class="glyphicon glyphicon-pushpin"></span>
-            </h1>
-            <p class="lead">With Angular, Typescript and Bootstrap 3</p>
-            <p><a class="btn btn-primary btn-lg" href="#">Party on, App <span class="glyphicon glyphicon-ok"></span></a>
-            </p>
-        </div>
+        <div ui-view=banner></div>
 
         <div class="row">
             <div class="col-lg-6">
-                <div ui-view></div>
+                <div ui-view=main></div>
             </div>
 
         </div>
@@ -115,6 +110,7 @@
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
         <!-- endbower -->
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
         <!-- endbuild -->
 
 

@@ -7,7 +7,14 @@ angular.module("DemoApp",['ui.router'])
 	$stateProvider
 	.state('home', {
 		url: '/',
-    	templateUrl:'partials/main.html'
+		views:{
+			banner:{
+    			templateUrl:'partials/main-banner.html'
+			},
+			main:{
+    			templateUrl:'partials/main.html'
+			}
+		}
 	    
 	})
 	.state('docs',{
