@@ -1,7 +1,6 @@
-typescript-webapp
+Modern Webapp
 =================
-
-A new take on the webapp template with typescript and angular built in
+LESS + Typescript + Angular = Awesome
 
 #Introduction
 This is based on the popular HTML5 boilerplate but with several additions.
