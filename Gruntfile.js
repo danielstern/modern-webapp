@@ -39,8 +39,8 @@ module.exports = function(grunt) {
                 tasks: ['test:watch']
             },
             less: {
-              files: ['<%= config.app %>/less/*.less'],
-              tasks: ['less']
+                files: ['<%= config.app %>/less/*.less'],
+                tasks: ['less']
             },
             gruntfile: {
                 files: ['Gruntfile.js']
@@ -69,11 +69,14 @@ module.exports = function(grunt) {
         // The actual grunt server settings
         connect: {
             options: {
-                port: process.env.PORT || 3000,
-                open: true,
+                port: process.env.PORT || 9000,
+                open: {
+                    target: 'http://localhost:9000' // target url to open
+                },
                 livereload: 35729,
                 // Change this to '0.0.0.0' to access the server from outside
-                // hostname: 'localhost'
+                hostname: '*'
+                    // hostname: 'localhost'
             },
             livereload: {
                 options: {
@@ -139,13 +142,13 @@ module.exports = function(grunt) {
         },
 
         ngAnnotate: {
-              options: {
-                  // Task-specific options go here.
-              },
-              dist: {
+            options: {
+                // Task-specific options go here.
+            },
+            dist: {
                 // files:
-              },
-          },
+            },
+        },
 
         less: {
             dev: {
@@ -279,33 +282,33 @@ module.exports = function(grunt) {
         // of minification. These next options are pre-configured if you do not
         // wish to use the Usemin blocks.
         cssmin: {
-          dist: {
-            options: {
-                mangle: false,
-                uglify:false
-            },
-            files: {
-              '<%= config.dist %>/styles/main.css': [
-                '.tmp/styles/{,*/}*.css',
-                '<%= config.app %>/styles/{,*/}*.css'
-              ]
+            dist: {
+                options: {
+                    mangle: false,
+                    uglify: false
+                },
+                files: {
+                    '<%= config.dist %>/styles/main.css': [
+                        '.tmp/styles/{,*/}*.css',
+                        '<%= config.app %>/styles/{,*/}*.css'
+                    ]
+                }
             }
-          }
         },
         uglify: {
-          options: {
-            mangle:false
-          },
-          dist: {
-            files: {
-              '<%= config.dist %>/scripts/scripts.js': [
-                '<%= config.dist %>/scripts/scripts.js'
-              ]
+            options: {
+                mangle: false
+            },
+            dist: {
+                files: {
+                    '<%= config.dist %>/scripts/scripts.js': [
+                        '<%= config.dist %>/scripts/scripts.js'
+                    ]
+                }
             }
-          }
         },
         concat: {
-          dist: {}
+            dist: {}
         },
 
         // Copies remaining files to places other tasks can use
