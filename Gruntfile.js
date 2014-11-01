@@ -152,13 +152,13 @@ module.exports = function(grunt) {
                 options: {
                     compress: true,
                     sourceMap: true,
-                    sourceMapFilename: 'app/styles/main.css.map', // where file is generated and located
+                    sourceMapFilename: '.tmp/styles/main.css.map', // where file is generated and located
                     sourceMapURL: '/styles/main.css.map', // the complete url and filename put in the compiled css file
                     sourceMapBasepath: 'app', // Sets sourcemap base path, defaults to current working directory.
                     sourceMapRootpath: '/', // adds this path onto the sourcemap filename and less file paths
                 },
                 files: {
-                    'app/styles/main.css': 'app/less/main.less',
+                    '.tmp/styles/main.css': 'app/less/main.less',
                 }
             }
         },
