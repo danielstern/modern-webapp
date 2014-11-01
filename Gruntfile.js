@@ -34,13 +34,6 @@ module.exports = function(grunt) {
                 files: ['bower.json'],
                 tasks: ['wiredep']
             },
-            // js: {
-            //   files: ['<%= config.app %>/scripts/{,*/}*.js'],
-            //   tasks: ['jshint'],
-            //   options: {
-            //     livereload: true
-            //   }
-            // },
             jstest: {
                 files: ['test/spec/{,*/}*.js'],
                 tasks: ['test:watch']
@@ -130,30 +123,16 @@ module.exports = function(grunt) {
             server: '.tmp'
         },
 
-        // Make sure code styles are up to par and there are no obvious mistakes
-        jshint: {
-            // options: {
-            //   jshintrc: '.jshintrc',
-            //   reporter: require('jshint-stylish')
-            // },
-            // all: [
-            //   'Gruntfile.js',
-            //   '<%= config.app %>/scripts/{,*/}*.js',
-            //   '!<%= config.app %>/scripts/vendor/*',
-            //   'test/spec/{,*/}*.js'
-            // ]
-        },
-
         // typescript yeah!
         typescript: {
             base: {
                 src: ['app/typescript/**/*.ts'],
-                dest: 'app/scripts/',
+                dest: '.tmp/scripts/',
                 options: {
                     module: 'amd', //or commonjs
                     target: 'es5', //or es3
                     basePath: 'app/typescript',
-                    // sourceMap: true,
+                    sourceMap: true,
                     declaration: true
                 }
             }
@@ -290,16 +269,20 @@ module.exports = function(grunt) {
         // By default, your `index.html`'s <!-- Usemin block --> will take care
         // of minification. These next options are pre-configured if you do not
         // wish to use the Usemin blocks.
-        // cssmin: {
-        //   dist: {
-        //     files: {
-        //       '<%= config.dist %>/styles/main.css': [
-        //         '.tmp/styles/{,*/}*.css',
-        //         '<%= config.app %>/styles/{,*/}*.css'
-        //       ]
-        //     }
-        //   }
-        // },
+        cssmin: {
+          dist: {
+            options: {
+                mangle: false,
+                uglify:false
+            },
+            files: {
+              '<%= config.dist %>/styles/main.css': [
+                '.tmp/styles/{,*/}*.css',
+                '<%= config.app %>/styles/{,*/}*.css'
+              ]
+            }
+          }
+        },
         // uglify: {
         //   dist: {
         //     files: {
@@ -411,7 +394,7 @@ module.exports = function(grunt) {
         'typescript',
         'less',
         'concat',
-        // 'cssmin',
+        'cssmin',
         'uglify',
         'copy:dist',
         'rev',
@@ -420,7 +403,6 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('default', [
-        'newer:jshint',
         'test',
         'build'
     ]);
