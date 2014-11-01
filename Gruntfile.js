@@ -138,6 +138,15 @@ module.exports = function(grunt) {
             }
         },
 
+        ngAnnotate: {
+              options: {
+                  // Task-specific options go here.
+              },
+              dist: {
+                // files:
+              },
+          },
+
         less: {
             dev: {
                 options: {
@@ -283,18 +292,21 @@ module.exports = function(grunt) {
             }
           }
         },
-        // uglify: {
-        //   dist: {
-        //     files: {
-        //       '<%= config.dist %>/scripts/scripts.js': [
-        //         '<%= config.dist %>/scripts/scripts.js'
-        //       ]
-        //     }
-        //   }
-        // },
-        // concat: {
-        //   dist: {}
-        // },
+        uglify: {
+          options: {
+            mangle:false
+          },
+          dist: {
+            files: {
+              '<%= config.dist %>/scripts/scripts.js': [
+                '<%= config.dist %>/scripts/scripts.js'
+              ]
+            }
+          }
+        },
+        concat: {
+          dist: {}
+        },
 
         // Copies remaining files to places other tasks can use
         copy: {
