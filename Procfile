@@ -1,1 +1,1 @@
-web: bower install; grunt serve:dist;
+web: bower install; grunt serve;
