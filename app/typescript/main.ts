@@ -13,4 +13,8 @@ angular.module("DemoApp",['ui.router'])
 		url: '/usage',
     	templateUrl:'partials/usage.html'
 	})
+	.state('features',{
+		url: '/features',
+    	templateUrl:'partials/features.html'
+	})
 })
