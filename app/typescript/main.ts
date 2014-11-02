@@ -17,8 +17,12 @@ angular.module("DemoApp",['ui.router'])
 		}
 	    
 	})
-	.state('docs',{
-		url: '/docs',
-		templateUrl:'partials/docs.html'
+	.state('usage',{
+		url: '/usage',
+		views:{
+			main:{
+    			templateUrl:'partials/usage.html'
+			}
+		}
 	})
 })
